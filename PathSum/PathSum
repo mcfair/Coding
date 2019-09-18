@@ -1,0 +1,91 @@
+Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+
+      5
+   4        8
+ 11    13    4
+7 2          5  1        22    5+4+11+2     5+8+4+5
+
+[5, 4, 11, 2]
+[5, 8, 4, 5]
+
+
+5
+
+Class TreeNode{
+  Int val;
+  TreeNode left;
+  TreeNode right;
+  TreeNode(int x){this.val = x;}
+}
+
+Public List<List<Integer>> subArrays(TreeNode root, int sum) {
+	If (root == null) {
+		Return new ArrayList<>();
+	}
+
+	List<List<Integer>> listToReturn = new ArrayList<>();
+	findSubPaths(listToReturn, root, sum, null);
+	Return listToReturn;
+}
+
+Public void findSubPaths(List<List<Integer>> listToReturn, TreeNode root, int remaining, List<Integer> currPath) {
+	If (root == null || remaining < 0) {
+		return;
+	}
+
+	If (currPath == null) {
+		currPath = new ArrayList<Integer>();
+	}
+
+
+	If (root.left == null && root.right == null && root.val == remaining) {
+		currPath.add(root.val);
+		listToReturn.add(currPath);
+		return;
+	}
+	
+	currPath.add(root.val);
+List<Integer> currPathright = List.copy(currPath);
+	findSubPaths(listToReturn, root.left, remaining - root.val, currPath);
+	findSubPaths(listToReturn, root.right, remaining - root.val, currPathRight);
+}
+
+
+          3                   
+     1
+  0
+0             4
+
+
+
+      5
+   4        8
+ 11    13    4
+7 2          5  1 
+
+TreeNode root
+Stack<TreeNode> stack
+
+
+process(node)
+
+
+Public void DFS(TreeNode root) {
+	If (root == null) {
+		return;
+}
+	
+Stack stack = new Stack<TreeNode>();
+stack.push(root);
+
+	while(!stack.isEmpty()) {
+		TreeNode tn = stack.peek();
+		process(stack.pop());
+		If (tn.left != null) {
+stack.push(tn.left);
+}
+		If (tn.right != null) {
+stack.push(tn.right);
+}
+	}
+}

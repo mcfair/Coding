@@ -1,0 +1,21 @@
+Basics
+
+1. clarify the question
+	input type, return type, complexity
+2. have examples
+3. brute force first
+4. pay attention
+	valid inputs, corner cases
+
+Primitive types
+- count bits: <<, >>> 0 is inserted; >> most significant bit
+- Double.valueOf("1.5"), Integer.parseInt("42"), Integer.toString(3), String.valueOf(3)
+- int res = (int) Math.pow(double 2, double 3) //8
+- Double.compare(x, 1.23)
+- r.nextInt()
+
+Array
+- length, size(), length()
+- copyOfRange(A, 1, 5), copyOf(A), equals(A), fill(A, 42), sort(A, cmp)
+
+

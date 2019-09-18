@@ -1,0 +1,53 @@
+public static int deleteDuplicates(List<Integer> A) {
+	int left = 0;
+	int right = 0;
+	while (right != A.size()-1) {
+		if (right's different from left or does not have left) {
+			copy over;
+			right++;
+			left++;
+		} else {
+			right++;
+		}
+	}
+}
+
+Stock
+
+while (right.right > right) {
+	go right
+	update right
+}
+
+while (low < right) {
+	update low
+	update difference
+}
+
+Selling Stock
+
+right = 0;
+left = 0;
+dataMin = A[0];
+dataMax = A[0];
+currentdifference = dataMax - dataMin;
+while (left != rightmost) {
+	// Move right to the right place
+	if (left = right) {
+		right++;
+		while (right.right == null || right.right > right) {
+			right++;
+		}
+		dataMax = A[right];
+	}
+	// Check left one by one, dataMin always updated
+	while (left < right) {
+		if (A[left] < dataMin) {
+			dataMin = A[left];
+		}
+		if (dataMax - dataMin > currentdifference) {
+			currentdifference = dataMax - dataMin
+		}
+		left++;
+	}
+}
