@@ -19,15 +19,15 @@ right [(a+b) / 2, b]           (ceil (a+b) / 2)
 
 
 /**
-* Definition of SegmentTreeNode:
-* public class SegmentTreeNode {
-*     public int start, end;
-*     public SegmentTreeNode left, right;
-*     public SegmentTreeNode(int start, int end) {
-*         this.start = start, this.end = end;
-*         this.left = this.right = null;
-*     }
-* }
+ Definition of SegmentTreeNode:
+ public class SegmentTreeNode {
+     public int start, end;
+     public SegmentTreeNode left, right;
+     public SegmentTreeNode(int start, int end) {
+         this.start = start, this.end = end;
+         this.left = this.right = null;
+     }
+ }
 
 ————————————————
 版权声明：本文为CSDN博主「月光下的夜曲」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
