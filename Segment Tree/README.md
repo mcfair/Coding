@@ -34,6 +34,7 @@ right [(a+b) / 2, b]           (ceil (a+b) / 2)
 原文链接：https://blog.csdn.net/luoshengkim/article/details/72568519
 
 
+SEGMENT TREE BUILD
 
 public class Solution {
 
@@ -58,3 +59,43 @@ public SegmentTreeNode build(int start, int end) {
 版权声明：本文为CSDN博主「月光下的夜曲」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/luoshengkim/article/details/72568519
 
+SEGMENT TREE BUILD2
+
+/**
+ * Definition of SegmentTreeNode:
+ * public class SegmentTreeNode {
+ *     public int start, end, max;
+ *     public SegmentTreeNode left, right;
+ *     public SegmentTreeNode(int start, int end, int max) {
+ *         this.start = start;
+ *         this.end = end;
+ *         this.max = max
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     *@param A: a list of integer
+     *@return: The root of Segment Tree
+     */
+    public SegmentTreeNode buildHelper(int[] A, int start, int end) {
+        if (start <= end) {
+            SegmentTreeNode node = new SegmentTreeNode(start, end, A[start]);
+            if (start == end) {
+                return node;
+            }
+            node.left = buildHelper(A, start, (start + end) / 2);
+            node.right = buildHelper(A, (start + end) / 2 + 1, end);
+            node.max = Math.max(node.left.max, node.right.max);
+            return node;
+        }
+        return null;
+    }
+    public SegmentTreeNode build(int[] A) {
+        return buildHelper(A, 0, A.length - 1);
+    }
+}
+————————————————
+版权声明：本文为CSDN博主「月光下的夜曲」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/luoshengkim/article/details/72568519
