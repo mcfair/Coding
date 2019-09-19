@@ -17,7 +17,7 @@ right [(a+b) / 2, b]           (ceil (a+b) / 2)
 [2,4]  [5,7]]
 
 
-
+```java
 /**
  Definition of SegmentTreeNode:
  public class SegmentTreeNode {
@@ -28,14 +28,10 @@ right [(a+b) / 2, b]           (ceil (a+b) / 2)
          this.left = this.right = null;
      }
  }
-
-————————————————
-版权声明：本文为CSDN博主「月光下的夜曲」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/luoshengkim/article/details/72568519
-
+```
 
 SEGMENT TREE BUILD
-
+```java
 public class Solution {
 
 / *
@@ -99,3 +95,4 @@ public class Solution {
 ————————————————
 版权声明：本文为CSDN博主「月光下的夜曲」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/luoshengkim/article/details/72568519
+```
